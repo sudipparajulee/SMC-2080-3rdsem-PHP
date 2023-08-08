@@ -17,7 +17,7 @@ $result = mysqli_query($con,$qry);
             }
             table{
                 border-collapse: collapse;
-                width: 600px;
+                width: 800px;
                 margin: auto;
                 background-color: #ffbbaa;
             }
@@ -26,10 +26,38 @@ $result = mysqli_query($con,$qry);
                 text-align: center;
                 padding: 10px;
             }
+            .create-btn{
+                text-align: right;
+                margin-right: 150px;
+            }
+            .create-btn a{
+                background-color: red;
+                color: white;
+                padding: 10px;
+                text-decoration: none;
+                border-radius: 5px;
+            }
+            .edit-btn{
+                background-color: blue;
+                color: white;
+                padding: 5px;
+                text-decoration: none;
+                border-radius: 5px;
+            }
+            .delete-btn{
+                background-color: red;
+                color: white;
+                padding: 5px;
+                text-decoration: none;
+                border-radius: 5px;
+            }
         </style>
     </head>
     <body>
         <h2>Our Users</h2>
+        <div class="create-btn">
+            <a href="createuser.php">Create New User</a>
+        </div>
         <table>
             <tr>
                 <th>S.N.</th>
@@ -37,6 +65,7 @@ $result = mysqli_query($con,$qry);
                 <th>Phone</th>
                 <th>Address</th>
                 <th>Email</th>
+                <th>Action</th>
             </tr>
             <?php
             $i =1;
@@ -49,6 +78,10 @@ $result = mysqli_query($con,$qry);
                 <td><?php echo $row['phone']; ?></td>
                 <td><?php echo $row['address']; ?></td>
                 <td><?php echo $row['email']; ?></td>
+                <td>
+                    <a href="" class="edit-btn">Edit</a>
+                    <a href="" class="delete-btn">Delete</a>
+                </td>
             </tr>
             <?php
             }
