@@ -79,7 +79,7 @@ $result = mysqli_query($con,$qry);
                 <td><?php echo $row['address']; ?></td>
                 <td><?php echo $row['email']; ?></td>
                 <td>
-                    <a href="" class="edit-btn">Edit</a>
+                    <a href="edituser.php?userid=<?php echo $row['id']; ?>" class="edit-btn">Edit</a>
                     <a href="" class="delete-btn">Delete</a>
                 </td>
             </tr>
