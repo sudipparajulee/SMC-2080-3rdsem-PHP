@@ -80,7 +80,7 @@ $result = mysqli_query($con,$qry);
                 <td><?php echo $row['email']; ?></td>
                 <td>
                     <a href="edituser.php?userid=<?php echo $row['id']; ?>" class="edit-btn">Edit</a>
-                    <a href="" class="delete-btn">Delete</a>
+                    <a href="deleteuser.php?userid=<?php echo $row['id']; ?>" class="delete-btn" onclick="return confirm('Are you sure to Delete?')">Delete</a>
                 </td>
             </tr>
             <?php
