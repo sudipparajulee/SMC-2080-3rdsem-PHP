@@ -21,9 +21,6 @@ move_uploaded_file($tmpname,"userimages/".$filename);
 unlink("userimages/".$data['photo']);
 }
 
-//now create connection
-$con = mysqli_connect("localhost","root","","smcproject");
-
 //create query to insert data
 $qry = "UPDATE users SET name='$name',phone='$phone',address='$address',email='$email',photo='$filename' WHERE id = $userid";
 
