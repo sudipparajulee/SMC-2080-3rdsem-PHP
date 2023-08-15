@@ -24,7 +24,7 @@ unlink("userimages/".$data['photo']);
 $con = mysqli_connect("localhost","root","","smcproject");
 
 //create query to insert data
-$qry = "UPDATE users SET name='$name',phone='$phone',address='$address',email='$email' WHERE id = $userid";
+$qry = "UPDATE users SET name='$name',phone='$phone',address='$address',email='$email',photo='$filename' WHERE id = $userid";
 
 //run query
 $result = mysqli_query($con,$qry);
