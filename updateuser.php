@@ -6,6 +6,7 @@ $email = $_POST['email'];
 $userid = $_POST['userid'];
 
 //get current data
+$con = mysqli_connect("localhost","root","","smcproject");
 $qry = "SELECT * FROM users WHERE id = $userid";
 $result = mysqli_query($con,$qry);
 $data = mysqli_fetch_assoc($result);
