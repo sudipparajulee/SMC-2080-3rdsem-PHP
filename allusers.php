@@ -51,6 +51,10 @@ $result = mysqli_query($con,$qry);
                 text-decoration: none;
                 border-radius: 5px;
             }
+
+            td img{
+                height: 100px;
+            }
         </style>
     </head>
     <body>
@@ -65,6 +69,7 @@ $result = mysqli_query($con,$qry);
                 <th>Phone</th>
                 <th>Address</th>
                 <th>Email</th>
+                <th>Picture</th>
                 <th>Action</th>
             </tr>
             <?php
@@ -78,6 +83,7 @@ $result = mysqli_query($con,$qry);
                 <td><?php echo $row['phone']; ?></td>
                 <td><?php echo $row['address']; ?></td>
                 <td><?php echo $row['email']; ?></td>
+                <td><img src="userimages/<?php echo $row['photo']; ?>" alt=""></td>
                 <td>
                     <a href="edituser.php?userid=<?php echo $row['id']; ?>" class="edit-btn">Edit</a>
                     <a href="deleteuser.php?userid=<?php echo $row['id']; ?>" class="delete-btn" onclick="return confirm('Are you sure to Delete?')">Delete</a>

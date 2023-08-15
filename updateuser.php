@@ -5,6 +5,21 @@ $address = $_POST['address'];
 $email = $_POST['email'];
 $userid = $_POST['userid'];
 
+//get current data
+$qry = "SELECT * FROM users WHERE id = $userid";
+$result = mysqli_query($con,$qry);
+$data = mysqli_fetch_assoc($result);
+$filename = $data['photo'];
+if($_FILES['photo']['name'] != "")
+{
+$filename = time().'_'.$_FILES['photo']['name'];
+$tmpname = $_FILES['photo']['tmp_name'];
+//move to folder
+move_uploaded_file($tmpname,"userimages/".$filename);
+//delete old photo
+unlink("userimages/".$data['photo']);
+}
+
 //now create connection
 $con = mysqli_connect("localhost","root","","smcproject");
 

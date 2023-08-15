@@ -38,12 +38,13 @@
         </style>
     </head>
     <body>
-        <form action="storeuser.php" method="POST">
+        <form action="storeuser.php" method="POST" enctype="multipart/form-data">
             <h1>Create New User</h1>
             <input type="text" placeholder="Enter Name" name="name">
             <input type="text" placeholder="Enter Phone" name="phone">
             <input type="text" placeholder="Enter Address" name="address">
             <input type="email" placeholder="Enter Email Address" name="email">
+            <input type="file" name="photo">
 
             <div class="form-footer">
                 <input type="submit" value="Register">

@@ -4,11 +4,17 @@ $phone = $_POST['phone'];
 $address = $_POST['address'];
 $email = $_POST['email'];
 
+$filename = time().'_'.$_FILES['photo']['name'];
+$tmpname = $_FILES['photo']['tmp_name'];
+//move to folder
+move_uploaded_file($tmpname,"userimages/".$filename);
+
+
 //now create connection
 $con = mysqli_connect("localhost","root","","smcproject");
 
 //create query to insert data
-$qry = "INSERT INTO users (name,phone,address,email) VALUES ('$name','$phone','$address','$email')";
+$qry = "INSERT INTO users (name,phone,address,email,photo) VALUES ('$name','$phone','$address','$email','$filename')";
 
 //run query
 $result = mysqli_query($con,$qry);

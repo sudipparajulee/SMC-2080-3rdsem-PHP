@@ -55,13 +55,18 @@ mysqli_close($con);
         </style>
     </head>
     <body>
-        <form action="updateuser.php" method="POST">
+        <form action="updateuser.php" method="POST" enctype="multipart/form-data">
             <h1>Edit User</h1>
             <input type="hidden" value="<?php echo $data['id']; ?>" name="userid">
             <input type="text" value="<?php echo $data['name']; ?>" placeholder="Enter Name" name="name">
             <input type="text" value="<?php echo $data['phone']; ?>" placeholder="Enter Phone" name="phone">
             <input type="text" value="<?php echo $data['address']; ?>" placeholder="Enter Address" name="address">
             <input type="email" value="<?php echo $data['email']; ?>" placeholder="Enter Email Address" name="email">
+            <input type="file" name="photo">
+            <p>
+                Current Photo: <br>
+                <img src="userimages/<?php echo $data['photo']; ?>" width="100px">
+            </p>
 
             <div class="form-footer">
                 <input type="submit" value="Update">
