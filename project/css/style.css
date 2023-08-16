@@ -1,0 +1,53 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.navbar{
+    background-color: blue;
+    padding: 10px;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar a:hover{
+    background-color: white;
+    color: blue;
+}
+
+.menu{
+    text-align: right;
+}
+
+.menu li{
+    display: inline;
+}
+
+.login-form{
+    width: 600px;
+    margin: 25px auto;
+    background-color: aqua;
+    text-align: center;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.login-form input{
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: 1px solid gray;
+    display: block;
+    width: 90%;
+}
+
+.login-form input[type="submit"]{
+    background-color: blue;
+    color: white;
+    border: none;
+    width: 40%;
+}   
