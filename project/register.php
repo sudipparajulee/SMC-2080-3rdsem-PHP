@@ -22,8 +22,8 @@ if(isset($_POST['submit']))
 
     if($password == $cpassword)
     {
-        $qry = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', 'md5($password)')";
-
+        $qry = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', md5($password))";
+        $con = mysqli_connect('localhost', 'root', '', 'smcdb');
         if(mysqli_query($con, $qry))
         {
             echo '<script type="text/javascript"> alert("User Registered"); window.href.location = "login.php"; </script>';
