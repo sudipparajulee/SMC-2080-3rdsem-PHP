@@ -19,7 +19,6 @@ if(isset($_POST['submit']))
     $email = $_POST['email'];
     $password = $_POST['password'];
     $cpassword = $_POST['cpassword'];
-
     if($password == $cpassword)
     {
         $qry = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', md5($password))";
