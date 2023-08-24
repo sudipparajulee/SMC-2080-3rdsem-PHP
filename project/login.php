@@ -20,8 +20,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     $result = mysqli_query($con, $qry);
     if(mysqli_num_rows($result) == 1)
     {
-        echo "Congratulation";
-        // header('location: index.php');
+        header('location: admin/dashboard.php');
     }
     else
     {
