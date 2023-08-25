@@ -86,3 +86,90 @@ body{
 .dashboard-card h3{
     font-size: 30px;
 }
+
+.admin-table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.admin-table th{
+    background-color: lightskyblue;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+.admin-table td{
+    border: 1px solid lightgray;
+    padding: 10px;
+}
+
+.admin-table tr:nth-child(odd){
+    background-color: lightcyan;
+}
+
+.edit-btn,.delete-btn{
+    padding: 5px 15px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.delete-btn{
+    background-color: red;
+}
+
+.add-btn{
+    text-align: right;
+    margin: 20px 10px;
+}
+
+.add-btn a{
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 1px 2px 8px lightgray;
+}
+
+.admin-form > input{
+    width: 98%;
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: aliceblue;
+    box-shadow: 1px 2px 5px rgb(191, 186, 186);
+}
+
+.admin-form > input:focus{
+    outline: 1px solid blue;
+}
+
+.form-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-footer input{
+    border: none;
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.form-footer a{
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    padding: 9px 30px;
+    border-radius: 8px;
+    margin: 0 10px;
+}

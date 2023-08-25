@@ -11,8 +11,8 @@
         <div class="nav">
             <img src="../images/logo.png" alt="">
             <ul class="menu">
-                <li><a href="">Dashboard</a></li>
-                <li><a href="">Categories</a></li>
+                <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="category.php">Categories</a></li>
                 <li><a href="">News</a></li>
                 <li><a href="">Ads</a></li>
                 <li><a href="">Logout</a></li>
