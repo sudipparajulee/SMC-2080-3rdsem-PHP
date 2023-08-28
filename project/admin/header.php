@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +11,7 @@
     <div class="admin-container">
         <div class="nav">
             <img src="../images/logo.png" alt="">
+            <p><?php echo $_SESSION['mysession']; ?></p>
             <ul class="menu">
                 <li><a href="dashboard.php">Dashboard</a></li>
                 <li><a href="category.php">Categories</a></li>

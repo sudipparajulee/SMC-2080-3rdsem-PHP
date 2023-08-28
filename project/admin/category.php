@@ -26,8 +26,8 @@ $result = mysqli_query($con, $qry);
         <td><?php echo $row['priority']; ?></td>
         <td><?php echo $row['name']; ?></td>
         <td>
-            <a href="" class="edit-btn">Edit</a>
-            <a href="" class="delete-btn">Delete</a>
+            <a href="editcategory.php?dataid=<?php echo $row['id'];?>" class="edit-btn">Edit</a>
+            <a href="actioncategory.php?deleteid=<?php echo $row['id']; ?>" class="delete-btn" onclick="return confirm('Are you Sure to Delete?')">Delete</a>
         </td>
     </tr>
 

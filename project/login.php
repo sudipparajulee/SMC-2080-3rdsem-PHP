@@ -1,4 +1,6 @@
-<?php include 'includes/header.php'; ?>
+<?php 
+session_start();
+include 'includes/header.php'; ?>
 
 <form action="" class="login-form" method="POST">
     <h1>Login</h1>
@@ -8,7 +10,8 @@
 </form>
 <center>Don't have login? <a href="register.php">Register Here</a></center>
 
-<?php include 'includes/footer.php'; ?>
+<?php 
+include 'includes/footer.php'; ?>
 
 <?php
 if($_SERVER['REQUEST_METHOD'] == 'POST')
@@ -20,6 +23,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     $result = mysqli_query($con, $qry);
     if(mysqli_num_rows($result) == 1)
     {
+        $_SESSION['mysession'] = "Hello";
         header('location: admin/dashboard.php');
     }
     else
