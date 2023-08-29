@@ -23,7 +23,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     $result = mysqli_query($con, $qry);
     if(mysqli_num_rows($result) == 1)
     {
-        $_SESSION['mysession'] = "Hello";
+        $_SESSION['loggedin'] = "Yes";
         header('location: admin/dashboard.php');
     }
     else
